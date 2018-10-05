@@ -1,0 +1,68 @@
+*
+{padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+.headAct
+{
+  height: 30vh;
+  width:100vw;
+  color: orangered;
+  background-color: black;
+  font-size: 3rem;
+  padding-top: 4rem;
+  text-align:center;
+}
+.line
+{
+  height:3vh;
+  width:100vw;
+  background-color: orangered;
+
+  &__1
+  {
+    background-color: white;
+  }
+}
+
+
+.container1
+{ background-color:lightgrey;
+  display:grid;
+  height:67vh;
+  width:100vw;
+  grid-template-rows:repeat(2,1fr);
+  grid-template-columns:repeat(2,1fr);
+
+
+}
+
+
+.box
+{ padding:1rem;
+  font-family:sans-serif;
+
+  &__1
+  {
+    background-color:red;
+
+  }
+   &__2
+  {
+     background-color:lightblue;
+
+  }
+   &__3
+  {
+     background-color:blueviolet;
+
+
+  }
+   &__4
+  {
+     background-color:yellowgreen;
+
+  }
+
+}

@@ -1,0 +1,299 @@
+*
+{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.head
+{
+  height:50vh;
+  width: 100%;
+  background-image: linear-gradient(135deg, #b61212 30.001% , white 30.0001%, white 74%, #b61212 74.001%);
+
+  &__logo{
+    // background-color: black;
+    background-image: url('img/rotaract_logo_red.png');
+    background-size: cover;
+height: 30vh;
+width:15vw;
+position: absolute;
+top:20%;
+left: 50%;
+transform: translate(-50%,-50%);
+border-radius: 50%;
+animation-name: moveInLeft;
+animation-duration: 2s;
+backface-visibility: hidden;
+}
+&__header
+{
+
+  color: #b61212;
+  position: absolute;
+  top:128%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  // background-color:black;
+  font-size: 4rem;
+font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+&__nav
+{
+  background-color:whitesmoke;
+height: 5.5vh;
+width:3vw;
+position:absolute ;
+top:43%;
+left: 95%;
+border-radius: 50%;
+
+&__hr1
+{
+  width:1.5rem;
+  position: absolute;
+height: 0.2rem;
+top:25%;
+  left:52%;
+  transform: translate(-54%);
+  background-color:#b61212;
+border: 0;
+
+}
+&__hr2
+{
+  width:1.5rem;
+  position: absolute;
+height: 0.2rem;
+top:50%;
+  left:52%;
+  transform: translate(-54%);
+    background-color:#b61212;
+border:0;
+
+}
+&__hr3
+{
+  width:1.5rem;
+  height: 0.2rem;
+  position: absolute;
+  top:75%;
+  border: 0;
+  left:52%;
+  transform: translate(-54%);
+  background-color:#b61212;
+
+
+
+}
+&__table
+{height:10vh;
+  width:100%;
+  background-color:white;
+  display: none;
+}
+
+&:hover.head__nav
+   {
+
+    }
+
+}
+
+.container
+{ background-color: orangered;
+  height:50vh;
+  display:grid;
+  grid-template-rows:1fr 1fr;
+  grid-template-columns:repeat(3,1fr);
+}
+
+
+.item
+{
+  // font-family:sans-serif;
+  font-size: 2rem;
+  border-right: 0.2rem solid black;
+  border-bottom: 0.2rem solid black;
+  transition: font-size 0.5s;
+  text-align:left;
+  position: relative;
+
+
+  &__1
+  {
+  //  background-image: url('img/5000_PNG_for_Word_documents_presentations_and_web_use_AdditionalFile.png');
+  //   background-position: center;
+  //   background-size: 80% 80%;
+  //   background-repeat: no-repeat;
+     background-color: #B61212;
+  }
+   &__2
+  {
+     background-color:#B61212;
+
+  }
+   &__3
+  {
+       background-color:#B61212;
+     grid-row:1/5;
+    grid-column:3/4;
+  }
+   &__4
+  {
+       background-color:#B61212;
+    grid-column:1/3;
+
+  }
+
+  &:hover
+  {
+    font-size: 2.5rem;
+  // -moz-box-shadow:    inset 0 0 1rem orangered;
+  // -webkit-box-shadow: inset 0 0 1rem orangered;
+  //  box-shadow:         inset 0 0 1rem orangered;
+   background-color:rgba(0, 0, 0, 1);
+
+   color:orangered;
+   -moz-box-shadow:    inset 0 0 10rem #f22727;
+   -webkit-box-shadow: inset 0 0 10rem #f22727;
+   box-shadow:         inset 0 0 10rem #f22727;
+
+
+    .hr
+    {
+      width: 25%;
+      border-color: orangered;
+    }
+    .hide
+    {
+      display: block;
+    }
+    .hide1
+    {
+      display: none;
+      position: absolute;
+      text-align: center;
+
+      transform: translate3d(-50%, -50%, 0);
+      color: white;
+    }
+  }
+}
+
+
+.hr
+{
+  padding-right: 40%;
+  width:2rem;
+  border-width:0.25rem;
+  border-color:black;
+  size:2rem;
+  align:center;
+  transition:width 0.5s;
+}
+.hide
+{
+  display: none;
+  transition: display 0.5s;
+}
+.hide1
+{
+  display: block;
+  transition: display 0.5s;
+}
+.text
+{
+
+  font-size:1.102rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  color: white;
+}
+
+.modal{
+  display:none;
+  position:absolute;
+  z-index:1;
+  left:50%;
+  top:70%;
+    transform: translate3d(-50%, -50%, 0);  
+  overflow: auto;
+
+}
+
+.modal-content{
+
+  position: relative;
+  top:45%;
+  transform: scale3d(-50%,0,0);
+  //margin: auto;
+
+  width:100%;
+  box-shadow: 0 0.5rem 0.8rem 0 rgba(0,0,0,0.2),0 0.7rem 2rem 0 rgba(0,0,0,0.17);
+  animation-name:modalopen;
+  animation-duration:1s;
+}
+
+.modal-header h2, .modal-footer h3{
+  margin:0;
+}
+
+.modal-header{
+  background:coral;
+  padding:1.5rem;
+  color:#fff;
+}
+
+.modal-body{
+  padding:1rem 2rem;
+}
+
+.modal-footer{
+  background:coral;
+  padding:1rem;
+  color:#fff;
+  text-align: center;
+}
+
+.closeBtn{
+  color:#ccc;
+  float: right;
+  font-size:2rem;
+  color:#fff;
+}
+
+.closeBtn:hover,.closeBtn:focus{
+  color:#000;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+@keyframes modalopen{
+  from{ opacity: 0}
+  to {opacity: 1}
+}
+
+
+
+@keyframes moveInLeft
+{
+  0%
+  {
+    transform: translate(-200%,-50%) ;
+    opacity: 0;
+   }
+
+ 100%
+   {
+    transform: translateX(0,-50%);
+    opacity: 1;
+   }
+}
