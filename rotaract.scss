@@ -1,5 +1,4 @@
-*
-{
+* {
   margin:0;
   padding:0;
   box-sizing: border-box;
@@ -9,100 +8,83 @@
     display: none;
 }
 
-.head
-{
+.head {
   height:50vh;
   width: 100%;
   background-image: linear-gradient(135deg, #b61212 30.001% , white 30.0001%, white 74%, #b61212 74.001%);
-
   &__logo{
     // background-color: black;
     background-image: url('img/rotaract_logo_red.png');
     background-size: cover;
-height: 30vh;
-width:15vw;
-position: absolute;
-top:20%;
-left: 50%;
-transform: translate(-50%,-50%);
-border-radius: 50%;
-animation-name: moveInLeft;
-animation-duration: 2s;
-backface-visibility: hidden;
-}
-&__header
-{
-
-  color: #b61212;
-  position: absolute;
-  top:128%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  // background-color:black;
-  font-size: 4rem;
-font-family: 'Lato', sans-serif;
-  font-weight: bold;
-}
-&__nav
-{
-  background-color:whitesmoke;
-height: 5.5vh;
-width:3vw;
-position:absolute ;
-top:43%;
-left: 95%;
-border-radius: 50%;
-
-&__hr1
-{
-  width:1.5rem;
-  position: absolute;
-height: 0.2rem;
-top:25%;
-  left:52%;
-  transform: translate(-54%);
-  background-color:#b61212;
-border: 0;
-
-}
-&__hr2
-{
-  width:1.5rem;
-  position: absolute;
-height: 0.2rem;
-top:50%;
-  left:52%;
-  transform: translate(-54%);
-    background-color:#b61212;
-border:0;
-
-}
-&__hr3
-{
-  width:1.5rem;
-  height: 0.2rem;
-  position: absolute;
-  top:75%;
-  border: 0;
-  left:52%;
-  transform: translate(-54%);
-  background-color:#b61212;
-
-
-
-}
-&__table
-{height:10vh;
-  width:100%;
-  background-color:white;
-  display: none;
-}
-
-&:hover.head__nav
-   {
-
+    height: 30vh;
+    width:15vw;
+    position: absolute;
+    top:20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    backface-visibility: hidden;
+  }
+  &__header {
+    color: #b61212;
+    position: absolute;
+    top:128%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    // background-color:black;
+    font-size: 4rem;
+  font-family: 'Lato', sans-serif;
+    font-weight: bold;
+  }
+  &__nav {
+    background-color:whitesmoke;
+    height: 5.5vh;
+    width:3vw;
+    position:absolute ;
+    top:43%;
+    left: 95%;
+    border-radius: 50%;
+    &__hr1 {
+      width:1.5rem;
+      position: absolute;
+      height: 0.2rem;
+      top:25%;
+      left:52%;
+      transform: translate(-54%);
+      background-color:#b61212;
+      border: 0;
     }
-
+    &__hr2 {
+      width:1.5rem;
+      position: absolute;
+      height: 0.2rem;
+      top:50%;
+      left:52%;
+      transform: translate(-54%);
+      background-color:#b61212;
+      border:0;
+    }
+    &__hr3 {
+      width:1.5rem;
+      height: 0.2rem;
+      position: absolute;
+      top:75%;
+      border: 0;
+      left:52%;
+      transform: translate(-54%);
+      background-color:#b61212;
+    }
+    &__table {
+      height:10vh;
+      width:100%;
+      background-color:white;
+      display: none;
+    }
+    &:hover.head__nav {
+    }
+  }
 }
 
 .container
@@ -224,7 +206,7 @@ border:0;
   z-index:1;
   left:50%;
   top:70%;
-    transform: translate3d(-50%, -50%, 0);  
+    transform: translate3d(-50%, -50%, 0);
   overflow: auto;
 
 }
@@ -247,17 +229,18 @@ border:0;
 }
 
 .modal-header{
-  background:coral;
+  background:red ;
   padding:1.5rem;
   color:#fff;
 }
 
 .modal-body{
   padding:1rem 2rem;
+  background-color: whitesmoke;
 }
 
 .modal-footer{
-  background:coral;
+  background-color:red;
   padding:1rem;
   color:#fff;
   text-align: center;

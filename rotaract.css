@@ -72,8 +72,6 @@
       width: 100%;
       background-color: white;
       display: none; }
-    .head__nav:hover > .head__nav__table {
-      display: block !important; }
 
 .container {
   background-color: orangered;
@@ -151,13 +149,9 @@
   left: 50%;
   top: 70%;
   transform: translate3d(-50%, -50%, 0);
-  height: 100%;
-  width: 50%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5); }
+  overflow: auto; }
 
 .modal-content {
-  background-color: #f4f4f4;
   position: relative;
   top: 45%;
   transform: scale3d(-50%, 0, 0);
@@ -170,15 +164,16 @@
   margin: 0; }
 
 .modal-header {
-  background: coral;
+  background: red;
   padding: 1.5rem;
   color: #fff; }
 
 .modal-body {
-  padding: 1rem 2rem; }
+  padding: 1rem 2rem;
+  background-color: whitesmoke; }
 
 .modal-footer {
-  background: coral;
+  background-color: red;
   padding: 1rem;
   color: #fff;
   text-align: center; }
