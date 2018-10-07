@@ -1,24 +1,36 @@
 @import 'rotaract.scss';
 @import 'style.scss';
+@import 'mixin.scss';
 
 html{
   font-family: 'Source Sans Pro', sans-serif;
+  background-color: black;
 }
 
 .encompass{
   // position: relative;
-  margin: 1.5vh;
+  margin: 1.25vh;
   border-radius: 2rem;
   overflow: hidden;
   background-color: #da5858;
+  @include respond(phone)
+  {
+    margin: 0;
+    border-radius: 0;
+  }
 }
 
 .carousel-mini{
   height: 30vh;
   width: 100%;
-  background-color: #bbb;
+  background-color:black;
   white-space: nowrap;
   overflow-x: scroll ;
+
+  @include respond(phone)
+  {
+    height: 25vh;
+  }
 
   &__element{
     position: relative;
@@ -30,6 +42,12 @@ html{
     background-color: whitesmoke;
     border-radius: 0.65rem;
     display: inline-block;
+
+    @include respond(phone)
+    {
+      height: 90%;
+      width:75%;
+    }
 
 
     &:first-child{

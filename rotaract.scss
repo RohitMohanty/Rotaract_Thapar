@@ -1,3 +1,4 @@
+@import 'mixin.scss';
 * {
   margin:0;
   padding:0;
@@ -12,6 +13,12 @@
   height:50vh;
   width: 100%;
   background-image: linear-gradient(135deg, #b61212 30.001% , white 30.0001%, white 74%, #b61212 74.001%);
+
+  @include respond(phone)
+  {
+    height: 40vh;
+      background-image: linear-gradient(135deg, #b61212 20.001% , white 20.0001%, white 84%, #b61212 84.001%);
+  }
   &__logo{
     // background-color: black;
     background-image: url('img/rotaract_logo_red.png');
@@ -26,6 +33,12 @@
     animation-name: moveInLeft;
     animation-duration: 2s;
     backface-visibility: hidden;
+    @include respond(phone)
+    {
+      height:20vh;
+      width:35vw;
+
+    }
   }
   &__header {
     color: #b61212;
@@ -37,6 +50,11 @@
     font-size: 4rem;
   font-family: 'Lato', sans-serif;
     font-weight: bold;
+
+    @include respond(phone)
+    {
+      font-size: 1.75rem;
+    }
   }
   &__nav {
     background-color:whitesmoke;
@@ -46,6 +64,14 @@
     top:43%;
     left: 95%;
     border-radius: 50%;
+
+    @include respond(phone)
+    {
+      height:4vh;
+      width:8vw;
+      top: 35%;
+      left:88%;
+    }
     &__hr1 {
       width:1.5rem;
       position: absolute;
@@ -55,6 +81,12 @@
       transform: translate(-54%);
       background-color:#b61212;
       border: 0;
+
+      @include respond(phone)
+      {
+        width: 1rem;
+        top:23%;
+      }
     }
     &__hr2 {
       width:1.5rem;
@@ -65,6 +97,12 @@
       transform: translate(-54%);
       background-color:#b61212;
       border:0;
+
+      @include respond(phone)
+      {
+        width: 1rem;
+        top:48%;
+      }
     }
     &__hr3 {
       width:1.5rem;
@@ -75,6 +113,12 @@
       left:52%;
       transform: translate(-54%);
       background-color:#b61212;
+
+      @include respond(phone)
+      {
+        width: 1rem;
+        top:73%;
+      }
     }
     &__table {
       height:10vh;
@@ -88,11 +132,19 @@
 }
 
 .container
-{ background-color: orangered;
+{ background-color:black;
   height:50vh;
   display:grid;
   grid-template-rows:1fr 1fr;
   grid-template-columns:repeat(3,1fr);
+  grid-gap:1%;
+
+  @include respond(phone)
+  {
+    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:0;
+  }
 }
 
 
@@ -106,6 +158,14 @@
   text-align:left;
   position: relative;
 
+@include respond(phone)
+{
+  font-size: 1rem;
+  border-left:  0.2rem solid black;
+
+
+}
+
 
   &__1
   {
@@ -114,22 +174,54 @@
   //   background-size: 80% 80%;
   //   background-repeat: no-repeat;
      background-color: #B61212;
+     border-radius: 0.8rem ;
+
+     @include respond(phone)
+     {
+       grid-row: 1/2;
+       grid-column: 1/5;
+       border-radius: 0.7rem;
+     }
   }
    &__2
   {
      background-color:#B61212;
+     border-radius:0.8rem;
 
+     @include respond(phone)
+     {
+       grid-row: 2/3;
+       grid-column: 1/5;
+       border-radius: 0.7rem;
+     }
   }
    &__3
   {
        background-color:#B61212;
      grid-row:1/5;
     grid-column:3/4;
+    border-radius: 10%;
+
+
+    @include respond(phone)
+    {
+      grid-row: 3/4;
+      grid-column: 1/5;
+      border-radius: 0.7rem;
+    }
   }
    &__4
   {
        background-color:#B61212;
     grid-column:1/3;
+    border-radius: 0.8rem;
+
+    @include respond(phone)
+    {
+      grid-row: 4/5;
+      grid-column: 1/5;
+      border-radius: 0.7rem;
+    }
 
   }
 
@@ -146,7 +238,13 @@
    -webkit-box-shadow: inset 0 0 10rem #f22727;
    box-shadow:         inset 0 0 10rem #f22727;
 
-
+    @include respond(phone)
+    {
+      font-size: 1.5rem;
+      -moz-box-shadow:    inset 0 0 2.5rem #f22727;
+      -webkit-box-shadow: inset 0 0 2.5rem #f22727;
+      box-shadow:         inset 0 0 2.5rem #f22727;
+    }
     .hr
     {
       width: 25%;
@@ -178,6 +276,16 @@
   size:2rem;
   align:center;
   transition:width 0.5s;
+
+  @include respond(phone)
+  {
+    width:1rem;
+    size:1rem;
+    border-width: 0.1rem;
+    position: relative;
+    left: 25%;
+    top:15%;
+  }
 }
 .hide
 {
@@ -209,6 +317,11 @@
     transform: translate3d(-50%, -50%, 0);
   overflow: auto;
 
+  @include respond(phone)
+  {
+
+  }
+
 }
 
 .modal-content{
@@ -222,6 +335,12 @@
   box-shadow: 0 0.5rem 0.8rem 0 rgba(0,0,0,0.2),0 0.7rem 2rem 0 rgba(0,0,0,0.17);
   animation-name:modalopen;
   animation-duration:1s;
+
+  @include respond(phone)
+  {
+
+    width:100%;
+  }
 }
 
 .modal-header h2, .modal-footer h3{
@@ -232,6 +351,11 @@
   background:red ;
   padding:1.5rem;
   color:#fff;
+
+  @include respond(phone)
+  {
+  padding:3rem;
+  }
 }
 
 .modal-body{

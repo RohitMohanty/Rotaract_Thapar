@@ -10,6 +10,10 @@
   height: 50vh;
   width: 100%;
   background-image: linear-gradient(135deg, #b61212 30.001%, white 30.0001%, white 74%, #b61212 74.001%); }
+  @media (max-width: 600px) {
+    .head {
+      height: 40vh;
+      background-image: linear-gradient(135deg, #b61212 20.001%, white 20.0001%, white 84%, #b61212 84.001%); } }
   .head__logo {
     background-image: url("img/rotaract_logo_red.png");
     background-size: cover;
@@ -23,6 +27,10 @@
     animation-name: moveInLeft;
     animation-duration: 2s;
     backface-visibility: hidden; }
+    @media (max-width: 600px) {
+      .head__logo {
+        height: 20vh;
+        width: 35vw; } }
   .head__header {
     color: #b61212;
     position: absolute;
@@ -32,6 +40,9 @@
     font-size: 4rem;
     font-family: 'Lato', sans-serif;
     font-weight: bold; }
+    @media (max-width: 600px) {
+      .head__header {
+        font-size: 1.75rem; } }
   .head__nav {
     background-color: whitesmoke;
     height: 5.5vh;
@@ -40,6 +51,12 @@
     top: 43%;
     left: 95%;
     border-radius: 50%; }
+    @media (max-width: 600px) {
+      .head__nav {
+        height: 4vh;
+        width: 8vw;
+        top: 35%;
+        left: 88%; } }
     .head__nav__hr1 {
       width: 1.5rem;
       position: absolute;
@@ -49,6 +66,10 @@
       transform: translate(-54%);
       background-color: #b61212;
       border: 0; }
+      @media (max-width: 600px) {
+        .head__nav__hr1 {
+          width: 1rem;
+          top: 23%; } }
     .head__nav__hr2 {
       width: 1.5rem;
       position: absolute;
@@ -58,6 +79,10 @@
       transform: translate(-54%);
       background-color: #b61212;
       border: 0; }
+      @media (max-width: 600px) {
+        .head__nav__hr2 {
+          width: 1rem;
+          top: 48%; } }
     .head__nav__hr3 {
       width: 1.5rem;
       height: 0.2rem;
@@ -67,6 +92,10 @@
       left: 52%;
       transform: translate(-54%);
       background-color: #b61212; }
+      @media (max-width: 600px) {
+        .head__nav__hr3 {
+          width: 1rem;
+          top: 73%; } }
     .head__nav__table {
       height: 10vh;
       width: 100%;
@@ -74,11 +103,17 @@
       display: none; }
 
 .container {
-  background-color: orangered;
+  background-color: black;
   height: 50vh;
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1%; }
+  @media (max-width: 600px) {
+    .container {
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0; } }
 
 .item {
   font-size: 2rem;
@@ -87,17 +122,45 @@
   transition: font-size 0.5s;
   text-align: left;
   position: relative; }
+  @media (max-width: 600px) {
+    .item {
+      font-size: 1rem;
+      border-left: 0.2rem solid black; } }
   .item__1 {
-    background-color: #B61212; }
+    background-color: #B61212;
+    border-radius: 0.8rem; }
+    @media (max-width: 600px) {
+      .item__1 {
+        grid-row: 1/2;
+        grid-column: 1/5;
+        border-radius: 0.7rem; } }
   .item__2 {
-    background-color: #B61212; }
+    background-color: #B61212;
+    border-radius: 0.8rem; }
+    @media (max-width: 600px) {
+      .item__2 {
+        grid-row: 2/3;
+        grid-column: 1/5;
+        border-radius: 0.7rem; } }
   .item__3 {
     background-color: #B61212;
     grid-row: 1/5;
-    grid-column: 3/4; }
+    grid-column: 3/4;
+    border-radius: 10%; }
+    @media (max-width: 600px) {
+      .item__3 {
+        grid-row: 3/4;
+        grid-column: 1/5;
+        border-radius: 0.7rem; } }
   .item__4 {
     background-color: #B61212;
-    grid-column: 1/3; }
+    grid-column: 1/3;
+    border-radius: 0.8rem; }
+    @media (max-width: 600px) {
+      .item__4 {
+        grid-row: 4/5;
+        grid-column: 1/5;
+        border-radius: 0.7rem; } }
   .item:hover {
     font-size: 2.5rem;
     background-color: black;
@@ -105,6 +168,12 @@
     -moz-box-shadow: inset 0 0 10rem #f22727;
     -webkit-box-shadow: inset 0 0 10rem #f22727;
     box-shadow: inset 0 0 10rem #f22727; }
+    @media (max-width: 600px) {
+      .item:hover {
+        font-size: 1.5rem;
+        -moz-box-shadow: inset 0 0 2.5rem #f22727;
+        -webkit-box-shadow: inset 0 0 2.5rem #f22727;
+        box-shadow: inset 0 0 2.5rem #f22727; } }
     .item:hover .hr {
       width: 25%;
       border-color: orangered; }
@@ -125,6 +194,14 @@
   size: 2rem;
   align: center;
   transition: width 0.5s; }
+  @media (max-width: 600px) {
+    .hr {
+      width: 1rem;
+      size: 1rem;
+      border-width: 0.1rem;
+      position: relative;
+      left: 25%;
+      top: 15%; } }
 
 .hide {
   display: none;
@@ -159,6 +236,9 @@
   box-shadow: 0 0.5rem 0.8rem 0 rgba(0, 0, 0, 0.2), 0 0.7rem 2rem 0 rgba(0, 0, 0, 0.17);
   animation-name: modalopen;
   animation-duration: 1s; }
+  @media (max-width: 600px) {
+    .modal-content {
+      width: 100%; } }
 
 .modal-header h2, .modal-footer h3 {
   margin: 0; }
@@ -167,6 +247,9 @@
   background: red;
   padding: 1.5rem;
   color: #fff; }
+  @media (max-width: 600px) {
+    .modal-header {
+      padding: 3rem; } }
 
 .modal-body {
   padding: 1rem 2rem;
@@ -245,20 +328,28 @@
     background-color: yellowgreen; }
 
 html {
-  font-family: 'Source Sans Pro', sans-serif; }
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: black; }
 
 .encompass {
-  margin: 1.5vh;
+  margin: 1.25vh;
   border-radius: 2rem;
   overflow: hidden;
   background-color: #da5858; }
+  @media (max-width: 600px) {
+    .encompass {
+      margin: 0;
+      border-radius: 0; } }
 
 .carousel-mini {
   height: 30vh;
   width: 100%;
-  background-color: #bbb;
+  background-color: black;
   white-space: nowrap;
   overflow-x: scroll; }
+  @media (max-width: 600px) {
+    .carousel-mini {
+      height: 25vh; } }
   .carousel-mini__element {
     position: relative;
     margin-left: 1vw;
@@ -269,6 +360,10 @@ html {
     background-color: whitesmoke;
     border-radius: 0.65rem;
     display: inline-block; }
+    @media (max-width: 600px) {
+      .carousel-mini__element {
+        height: 90%;
+        width: 75%; } }
     .carousel-mini__element:first-child {
       margin-left: 2vw; }
     .carousel-mini__element:hover {

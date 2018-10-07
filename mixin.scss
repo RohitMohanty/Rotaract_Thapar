@@ -1,0 +1,11 @@
+@mixin respond($break)
+{ @if $break == phone
+  {
+    @media (max-width: 600px)
+    {
+      @content
+    }
+  }
+
+
+}
