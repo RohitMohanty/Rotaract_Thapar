@@ -228,6 +228,33 @@
   transform: translate3d(-50%, -50%, 0);
   overflow: auto; }
 
+.modal1 {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 70%;
+  transform: translate3d(-50%, -50%, 0);
+  overflow: auto; }
+
+.modal2 {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 70%;
+  transform: translate3d(-50%, -50%, 0);
+  overflow: auto; }
+
+.modal3 {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 70%;
+  transform: translate3d(-50%, -50%, 0);
+  overflow: auto; }
+
 .modal-content {
   position: relative;
   top: 45%;
@@ -252,7 +279,6 @@
       padding: 3rem; } }
 
 .modal-body {
-  padding: 1rem 2rem;
   background-color: whitesmoke; }
 
 .modal-footer {
@@ -261,18 +287,68 @@
   color: #fff;
   text-align: center; }
 
-.closeBtn {
+#closeBtn {
   color: #ccc;
   float: right;
   font-size: 2rem;
   color: #fff; }
 
-.closeBtn:hover, .closeBtn:focus {
+#closeBtn1 {
+  color: #ccc;
+  float: right;
+  font-size: 2rem;
+  color: #fff; }
+
+#closeBtn2 {
+  color: #ccc;
+  float: right;
+  font-size: 2rem;
+  color: #fff; }
+
+#closeBtn3 {
+  color: #ccc;
+  float: right;
+  font-size: 2rem;
+  color: #fff; }
+
+#closeBtn:hover, #closeBtn:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer; }
 
+#closeBtn1:hover, #closeBtn1:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer; }
+
+#closeBtn2:hover, #closeBtn2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer; }
+
+#closeBtn3:hover, #closeBtn3:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer; }
+
+.box-size {
+  height: 50vh;
+  width: 70vw;
+  background-size: cover;
+  background-position: center; }
+  @media (max-width: 600px) {
+    .box-size {
+      height: 30vh;
+      width: 90vw;
+      background-position: left; } }
+
 @keyframes modalopen {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes modalopen1 {
   from {
     opacity: 0; }
   to {
@@ -294,38 +370,100 @@
 .headAct {
   height: 30vh;
   width: 100vw;
-  color: orangered;
-  background-color: black;
+  color: #B61212;
+  background-color: white;
   font-size: 3rem;
   padding-top: 4rem;
-  text-align: center; }
+  text-align: center;
+  font-family: 'Lato', sans-serif; }
+  @media (max-width: 600px) {
+    .headAct {
+      font-size: 1rem;
+      padding-top: 6rem; } }
 
 .line {
   height: 3vh;
   width: 100vw;
-  background-color: orangered; }
+  background-color: black; }
   .line__1 {
     background-color: white; }
 
 .container1 {
-  background-color: lightgrey;
   display: grid;
   height: 67vh;
   width: 100vw;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(2, 1fr); }
+  grid-template-rows: repeat(1fr);
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #B61212; }
+  @media (max-width: 600px) {
+    .container1 {
+      height: 100vh;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: 1fr; } }
 
 .box {
-  padding: 1rem;
   font-family: sans-serif; }
   .box__1 {
-    background-color: red; }
-  .box__2 {
-    background-color: lightblue; }
-  .box__3 {
-    background-color: blueviolet; }
-  .box__4 {
-    background-color: yellowgreen; }
+    text-align: center;
+    padding: 4rem; }
+    @media (max-width: 600px) {
+      .box__1 {
+        padding: 2rem; } }
+
+.texts {
+  font-size: 1.5rem;
+  color: white; }
+  @media (max-width: 600px) {
+    .texts {
+      font-size: 1rem; } }
+
+.outer {
+  height: 70%;
+  width: 45%;
+  border: solid;
+  border-width: 0.5rem;
+  border-color: white;
+  background-image: url("img/tree3.jpg");
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  left: 50%;
+  top: 60%;
+  transform: translate3d(-50%, -50%, 0);
+  border-radius: 2rem;
+  transition: border-width 0.5s;
+  z-index: 0; }
+  @media (max-width: 600px) {
+    .outer {
+      top: 40%;
+      left: 45%; } }
+  .outer:hover {
+    border-width: 0rem;
+    z-index: 2; }
+
+.outer1 {
+  height: 70%;
+  width: 45%;
+  border: solid;
+  border-width: 0.5rem;
+  background-image: url("img/tree1.jpg");
+  background-size: cover;
+  background-position: right;
+  position: relative;
+  border-color: white;
+  left: 60%;
+  top: -30%;
+  border-radius: 2rem;
+  transform: translate3d(-50%, -50%, 0);
+  transition: border-width 0.5s;
+  z-index: 1; }
+  @media (max-width: 600px) {
+    .outer1 {
+      top: -10%;
+      left: 55%; } }
+  .outer1:hover {
+    border-width: 0rem; }
 
 html {
   font-family: 'Source Sans Pro', sans-serif;
@@ -384,13 +522,13 @@ html {
   background-position: center; }
 
 .image__3 {
-  background-image: url("img/3.jpg");
+  background-image: url("img/4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
 
 .image__4 {
-  background-image: url("img/4.jpg");
+  background-image: url("img/3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
@@ -403,6 +541,48 @@ html {
 
 .image__6 {
   background-image: url("img/6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.image__7 {
+  background-image: url("img/7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.image__8 {
+  background-image: url("img/8.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.image__9 {
+  background-image: url("img/9.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.image__10 {
+  background-image: url("img/10.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.image__11 {
+  background-image: url("img/11.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.image__12 {
+  background-image: url("img/12.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.image__13 {
+  background-image: url("img/13.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }

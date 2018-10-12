@@ -1,3 +1,5 @@
+@import 'mixin.scss';
+
 *
 {padding:0;
   margin:0;
@@ -8,17 +10,26 @@
 {
   height: 30vh;
   width:100vw;
-  color: orangered;
-  background-color: black;
+  color:#B61212;
+  background-color:white;
   font-size: 3rem;
   padding-top: 4rem;
   text-align:center;
+  font-family:  'Lato', sans-serif;
+
+
+  @include respond(phone)
+  {
+    font-size: 1rem;
+    padding-top: 6rem;
+  }
 }
+
 .line
 {
   height:3vh;
   width:100vw;
-  background-color: orangered;
+  background-color: black;
 
   &__1
   {
@@ -28,41 +39,114 @@
 
 
 .container1
-{ background-color:lightgrey;
+{
   display:grid;
   height:67vh;
   width:100vw;
-  grid-template-rows:repeat(2,1fr);
+  grid-template-rows:repeat(1fr);
   grid-template-columns:repeat(2,1fr);
+background-color:#B61212;
+  @include respond(phone)
+  {height: 100vh;
+    grid-template-rows:repeat(2,1fr);
+    grid-template-columns:1fr;
+  }
 
 
 }
 
 
 .box
-{ padding:1rem;
+{
   font-family:sans-serif;
 
   &__1
   {
-    background-color:red;
+  text-align: center;
+    padding: 4rem;
+
+    @include respond(phone)
+    {
+      padding: 2rem;
+    }
 
   }
-   &__2
+
+}
+.texts
+{
+
+  font-size: 1.5rem;
+
+  color: white;
+
+  @include respond(phone)
   {
-     background-color:lightblue;
-
+    font-size: 1rem;
   }
-   &__3
+
+
+}
+
+.outer
+{
+  height: 70%;
+  width:45%;
+  border: solid;
+  border-width: 0.5rem;
+  border-color:white;
+  background-image:url('img/tree3.jpg');
+  background-position:right;
+  background-size:cover;
+  background-repeat: no-repeat;
+  position: relative;
+  left:50%;
+  top:60%;
+  transform: translate3d(-50%,-50%,0);
+  border-radius: 2rem;
+  transition: border-width 0.5s;
+  z-index: 0;
+
+  @include respond(phone)
   {
-     background-color:blueviolet;
-
-
+    top:40%;
+    left:45%;
   }
-   &__4
+
+
+  &:hover
   {
-     background-color:yellowgreen;
+    border-width: 0rem;
+    z-index: 2;
+  }
+}
 
+.outer1
+{
+  height: 70%;
+  width:45%;
+  border: solid;
+  border-width: 0.5rem;
+  background-image:url('img/tree1.jpg');
+  background-size: cover;
+  background-position:right;
+  position: relative;
+  border-color: white;
+  left:60%;
+  top:-30%;
+  border-radius: 2rem;
+  transform: translate3d(-50%,-50%,0);
+  transition: border-width 0.5s;
+  z-index:1;
+
+  @include respond(phone)
+  {
+    top: -10%;
+    left: 55%;
   }
 
+  &:hover
+  {
+    border-width: 0rem;
+  }
 }

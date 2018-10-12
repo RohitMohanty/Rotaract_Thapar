@@ -79,14 +79,14 @@ html{
       }
       &__3
         {
-          background-image: url('img/3.jpg');
+          background-image: url('img/4.jpg');
         background-repeat: no-repeat;
           background-size: cover;
           background-position: center;
         }
         &__4
           {
-            background-image: url('img/4.jpg');
+            background-image: url('img/3.jpg');
           background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -95,7 +95,7 @@ html{
             {
               background-image: url('img/5.jpg');
             background-repeat: no-repeat;
-              background-size: cover;
+              background-size:cover;
               background-position: center;
             }
             &__6
@@ -105,6 +105,55 @@ html{
                 background-size: cover;
                 background-position: center;
               }
+              &__7
+                {
+                  background-image: url('img/7.jpg');
+                background-repeat: no-repeat;
+                  background-size: cover;
+                  background-position: center;
+                }
+                &__8
+                  {
+                    background-image: url('img/8.jpg');
+                  background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                  }
+                  &__9
+                    {
+                      background-image: url('img/9.jpg');
+                    background-repeat: no-repeat;
+                      background-size: cover;
+                      background-position: center;
+                    }
+                    &__10
+                      {
+                        background-image: url('img/10.jpg');
+                      background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                      }
+                      &__11
+                        {
+                          background-image: url('img/11.jpg');
+                        background-repeat: no-repeat;
+                          background-size: cover;
+                          background-position: center;
+                        }
+                        &__12
+                          {
+                            background-image: url('img/12.jpg');
+                          background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: center;
+                          }
+                          &__13
+                            {
+                              background-image: url('img/13.jpg');
+                            background-repeat: no-repeat;
+                              background-size: cover;
+                              background-position: center;
+                            }
 
 
 }
