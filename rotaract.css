@@ -593,3 +593,16 @@ html {
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
   color: white; }
+
+.contact{
+
+    position: relative;
+    left:2%;
+    top:30%;
+    display: inline-block;
+    background-color: #000;
+    border-radius: 0.5em;
+    font-size: 1.5em;
+    color: #B61212;
+    padding: 0.25em;
+  }
